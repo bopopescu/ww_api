@@ -12,7 +12,7 @@ from flask.json import JSONEncoder
 from datetime import date, datetime, timedelta
 import time
 from dateutil.relativedelta import relativedelta
-# from app.py import *
+from api_authenticate import require_app_key
 
 mysql = MySQL()
 app = Flask(__name__)
@@ -37,6 +37,7 @@ analysts = Blueprint('analysts',__name__)
 
 
 @analysts.route('/analysts', methods = ['GET'])
+# @app.route('/analysts', methods = ['GET'])
 # @require_app_key
 def get_analysts():
 	cur.execute("SELECT * FROM tr_Analyst LIMIT 1000")
