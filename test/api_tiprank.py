@@ -12,7 +12,7 @@ from flask.json import JSONEncoder
 from datetime import date, datetime, timedelta
 import time
 from dateutil.relativedelta import relativedelta
-from api_authenticate import require_app_key
+# from api_authenticate import require_app_key
 
 mysql = MySQL()
 app = Flask(__name__)
