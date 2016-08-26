@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
 from sqlalchemy.orm import scoped_session, sessionmaker, Query
-
+from flask import Flask
 # mysql = MySQL()
 
 
@@ -28,16 +28,23 @@ from sqlalchemy.orm import scoped_session, sessionmaker, Query
 
 
 # ---------------------------
+
 db = SQLAlchemy()
-
 # app = Flask(__name__)
-# db.init_app(app)
-
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = \
 # 	"mysql://mengjiao:6GpNU4GfD434N5dj@kibot-data.cgbzucciybhz.us-east-1.rds.amazonaws.com/mengjiao"
 
-db.Model.metadata.reflect(db.engine)
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
+
+
+
+# db.init_app(app)
+# app.app_context().push()
+
+
+
+# db.Model.metadata.reflect(db.engine)
 
 
 # class Stock(db.Model):
